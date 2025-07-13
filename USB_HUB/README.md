@@ -41,8 +41,6 @@ Each function is organized into its own schematic section:
 | **USB-A Outputs**         | ![USB-A Out](images/USBA_OUT.PNG) |
 | **USB-C Input + LDO**     | ![USB-C Input](images/USBC_input.PNG) |
 
-> Tip: Store images in a GitHub folder like `/images/` for clean references.
-
 ---
 
 ## 🖼️ PCB Layout
@@ -86,8 +84,8 @@ The board is designed for compactness, single-sided assembly, and port-aligned o
 
 - [x] Schematic complete  
 - [x] PCB layout finished  
-- [ ] PCB ordered and assembled  
-- [ ] Firmware/EEPROM descriptor config (optional)  
+- [x] PCB ordered and assembled  
+- [x] Firmware/EEPROM descriptor config (optional)  
 - [ ] Enclosure design for USB ports  
 
 ---
