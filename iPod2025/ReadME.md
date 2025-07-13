@@ -102,22 +102,4 @@ Each module is documented and separated for easy understanding:
 - USB audio class support
 - Bluetooth A2DP streaming
 
----
-
-## 📄 License
-
-This project is open-source under the MIT License. Feel free to fork, modify, and contribute!
-
----
-
-## 🤝 Contributions
-
-PRs and feedback are welcome! Whether it's firmware features, layout improvements, or accessory designs—your input is appreciated.
-
----
-
-## 📬 Contact
-
-Have questions or want to collaborate? Open an issue or reach out via the Discussions tab.
-
 
