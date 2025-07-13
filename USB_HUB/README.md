@@ -100,13 +100,3 @@ The board is designed for compactness, single-sided assembly, and port-aligned o
 
 ---
 
-## 📄 License
-
-This project is open-source under the MIT License. Feel free to fork, modify, and contribute.
-
----
-
-## 💬 Contact
-
-Questions or want to integrate it into your own project?  
-Open an issue or start a discussion on this repo.
