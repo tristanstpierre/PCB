@@ -12,51 +12,98 @@ This compact digital audio player leverages the power of the ESP32-S3 for audio 
 
 ## 🧩 Hardware Architecture
 
-### 🧠 Microcontroller: **ESP32-S3**
+### 🧠 Microcontroller: [ESP32-S3](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 - Controls SD card interface, DAC, USB, and external memory
 - I²S output for digital audio
 - Wi-Fi/Bluetooth ready
 - Uses external Flash + PSRAM for expanded storage and buffering
 
-### 💾 Storage: **microSD Card**
-- Molex 1051620001 slot
+### 💾 Storage: [microSD Card Socket - Molex 1051620001](https://www.molex.com/en-us/products/part-detail/1051620001)
 - SPI-connected via level-shifted interface
 - Holds audio files (MP3, WAV, etc.)
 
 ### 🎧 Audio Chain:
-#### 1. **DAC: PCM5102A**
+#### 1. [DAC: PCM5102A](https://www.ti.com/lit/ds/symlink/pcm5102a.pdf)
 - Converts I²S digital audio to analog
 - Internal charge pump for true ground-referenced output
 - Low-pass filtered analog output
 
-#### 2. **Amplifier: TPA152DG4**
+#### 2. [Amplifier: TPA152DG4](https://www.ti.com/lit/ds/symlink/tpa152.pdf)
 - Drives headphones with clean audio
 - Input high-pass and output low-pass filters
 - Depop resistors prevent power-on pops
 - 3.5mm stereo jack output
 
-### 🔌 USB-C Interface
+### 🔌 [USB-C Interface with USBLC6-2SC6](https://www.st.com/resource/en/datasheet/usblc6-2sc6.pdf)
 - Accepts 5V power input
 - ESD protected data lines (optional USB audio or serial)
 - LC power filter for clean VBUS
 
-### ⚡ Power Management
-- AMS1117-3.3 LDO provides 3.3V rail
+### ⚡ [Power Regulation: AMS1117-3.3](https://www.advanced-monolithic.com/pdf/ds1117.pdf)
+- Regulates 5V from USB down to 3.3V
 - Decoupling and filtering for analog and digital domains
 
-### ⏱️ Clocking
-- 40 MHz crystal with load caps for ESP32-S3
-- Stable timing for WiFi and core processing
+### 💾 External Memory
+- [Flash: IS25LP128F-JBLE (128Mbit SPI Flash)](https://www.issi.com/WW/pdf/25LP128F.pdf)
+- [PSRAM: ESP-PSRAM64H (64Mbit)](https://www.espressif.com/sites/default/files/documentation/esp-psram64h_datasheet_en.pdf)
+
+### 🔁 [Level Shifter: 74LVC125A](https://assets.nexperia.com/documents/data-sheet/74LVC125A.pdf)
+- Used to safely drive the SD card's SPI interface from the 3.3V domain
 
 ---
 
 ## 📐 Schematics
 
-The design is divided into modular blocks:
+The design is modular and separated into:
 - `MCU (ESP32-S3)`
 - `External Flash & PSRAM`
 - `DAC (PCM5102A)`
 - `Headphone Amp (TPA152)`
 - `microSD Interface`
 - `USB-C Power & Data`
-- `+3
+- `+3.3V LDO Regulator`
+
+---
+
+## 🚧 Status
+
+- [x] Schematic design complete  
+- [ ] PCB layout in progress  
+- [ ] Firmware development (audio decoding, filesystem, UI)  
+- [ ] Enclosure design (optional)
+
+---
+
+## 🛠️ Tools Used
+
+- **KiCad** for schematic and PCB
+- **ESP-IDF** or **Arduino-ESP32** for firmware
+- **UltraLibrarian** for footprint/symbol conversion
+
+---
+
+## 💡 Future Features
+
+- OLED or LCD screen for UI
+- Rotary encoder for navigation
+- USB audio class support
+- Bluetooth A2DP streaming
+
+---
+
+## 📄 License
+
+This project is open-source under the MIT License. Feel free to fork, modify, and contribute!
+
+---
+
+## 🤝 Contributions
+
+PRs and feedback are welcome! Whether it's firmware features, layout improvements, or accessory designs—your input is appreciated.
+
+---
+
+## 📬 Contact
+
+Have questions or want to collaborate? Open an issue or reach out via the Discussions tab.
+
