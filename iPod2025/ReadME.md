@@ -22,7 +22,7 @@ This compact digital audio player leverages the power of the ESP32-S3 for audio 
 - SPI-connected via level-shifted interface
 - Holds audio files (MP3, WAV, etc.)
 
-### 🎧 Audio Chain:
+### 🎧 Audio Chain
 #### 1. [DAC: PCM5102A](https://www.ti.com/lit/ds/symlink/pcm5102a.pdf)
 - Converts I²S digital audio to analog
 - Internal charge pump for true ground-referenced output
@@ -44,32 +44,47 @@ This compact digital audio player leverages the power of the ESP32-S3 for audio 
 - Decoupling and filtering for analog and digital domains
 
 ### 💾 External Memory
-- [Flash: IS25LP128F-JBLE (128Mbit SPI Flash)](https://www.issi.com/WW/pdf/25LP128F.pdf)
-- [PSRAM: ESP-PSRAM64H (64Mbit)](https://www.espressif.com/sites/default/files/documentation/esp-psram64h_datasheet_en.pdf)
+- [Flash: IS25LP128F-JBLE](https://www.issi.com/WW/pdf/25LP128F.pdf) – 128Mbit SPI NOR Flash
+- [PSRAM: ESP-PSRAM64H](https://www.espressif.com/sites/default/files/documentation/esp-psram64h_datasheet_en.pdf) – 64Mbit SPI PSRAM
 
 ### 🔁 [Level Shifter: 74LVC125A](https://assets.nexperia.com/documents/data-sheet/74LVC125A.pdf)
 - Used to safely drive the SD card's SPI interface from the 3.3V domain
 
 ---
 
-## 📐 Schematics
+## 🖼️ PCB Layout & 3D Render
 
-The design is modular and separated into:
-- `MCU (ESP32-S3)`
-- `External Flash & PSRAM`
-- `DAC (PCM5102A)`
-- `Headphone Amp (TPA152)`
-- `microSD Interface`
-- `USB-C Power & Data`
-- `+3.3V LDO Regulator`
+| 3D Render | PCB Layout |
+|----------|-------------|
+| ![3D model](images/3D_model_image.PNG) | ![Full PCB](images/Full_PCB_image.PNG) |
+
+| No Inner Layers View |
+|----------------------|
+| ![No inner layers](images/PCB_no_inner_layers_image.PNG) |
+
+> Upload these images to a folder like `images/` inside your GitHub repo.
 
 ---
 
-## 🚧 Status
+## 📐 Schematic Overview
+
+Each module is documented and separated for easy understanding:
+
+| Module | Preview |
+|--------|---------|
+| **MCU (ESP32-S3)** | ![MCU](images/MCU_image.PNG) |
+| **DAC** | ![DAC](images/DAC_image.PNG) |
+| **Headphone Amp** | ![Amp](images/AMP_image.PNG) |
+| **USB-C & SD Card** | ![Connectors](images/Connectors_image.PNG) |
+
+---
+
+## 🚧 Project Status
 
 - [x] Schematic design complete  
-- [ ] PCB layout in progress  
-- [ ] Firmware development (audio decoding, filesystem, UI)  
+- [x] PCB layout complete  
+- [ ] Board fabrication and assembly  
+- [ ] Firmware development (audio decoding, UI)  
 - [ ] Enclosure design (optional)
 
 ---
@@ -106,4 +121,5 @@ PRs and feedback are welcome! Whether it's firmware features, layout improvement
 ## 📬 Contact
 
 Have questions or want to collaborate? Open an issue or reach out via the Discussions tab.
+
 
