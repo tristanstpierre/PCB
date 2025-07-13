@@ -62,8 +62,6 @@ This compact digital audio player leverages the power of the ESP32-S3 for audio 
 |----------------------|
 | ![No inner layers](images/PCB_no_inner_layers_image.PNG) |
 
-> Upload these images to a folder like `images/` inside your GitHub repo.
-
 ---
 
 ## 📐 Schematic Overview
