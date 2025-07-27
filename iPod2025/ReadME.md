@@ -101,5 +101,6 @@ Each module is documented and separated for easy understanding:
 - Rotary encoder for navigation
 - USB audio class support
 - Bluetooth A2DP streaming
+- Buttons lol
 
 
