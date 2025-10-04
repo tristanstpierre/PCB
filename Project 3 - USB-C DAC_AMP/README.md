@@ -15,10 +15,10 @@ A custom PCB that integrates a **USB Audio Class 2.0 interface**, a **PCM DAC**,
 * **Class-D outputs**: routed as wide paired traces (differential).
 
 **PCB Layout View:**
-![PCB Layout](PCB_Plain_view_2.PNG)
+![PCB Layout](PCB_Plain_view_3.PNG)
 
 **3D Render:**
-![3D PCB](PCB_Real_view.PNG)
+![3D PCB](PCB_Real_view_2.PNG)
 
 ---
 
