@@ -1,5 +1,8 @@
 # USB‑C Hub with USB 3.0, Gigabit Ethernet, and USB‑PD
 
+![20V to 5V Buck Converter](./20_to_5v.png)
+
+
 This repository documents a **custom USB‑C hub hardware design** built around a SuperSpeed USB 3.0 hub controller, USB‑PD for upstream and downstream power negotiation, integrated Gigabit Ethernet, and a robust multi‑rail power architecture.
 
 The goal of this project is to serve as both a **fully‑featured USB‑C dock reference design** and a **learning‑driven, datasheet‑first hardware project**, emphasizing power integrity, high‑speed layout discipline, and real‑world USB‑PD behavior.
