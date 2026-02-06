@@ -1,5 +1,7 @@
 # USB‑C Hub with USB 3.0, Gigabit Ethernet, and USB‑PD
 
+![PCB](./PCB.PNG)
+
 
 This repository documents a **custom USB‑C hub hardware design** built around a SuperSpeed USB 3.0 hub controller, USB‑PD for upstream and downstream power negotiation, integrated Gigabit Ethernet, and a robust multi‑rail power architecture.
 
