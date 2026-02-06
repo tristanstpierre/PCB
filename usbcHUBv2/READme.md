@@ -1,7 +1,5 @@
 # USB‑C Hub with USB 3.0, Gigabit Ethernet, and USB‑PD
 
-![20V to 5V Buck Converter](./20_to_5v.PNG)
-
 
 This repository documents a **custom USB‑C hub hardware design** built around a SuperSpeed USB 3.0 hub controller, USB‑PD for upstream and downstream power negotiation, integrated Gigabit Ethernet, and a robust multi‑rail power architecture.
 
@@ -26,6 +24,8 @@ Each schematic page below corresponds to a functional block of the system.
 
 ## 1. 20 V → 5 V Buck Converter
 
+![20V to 5V Buck Converter](./20_to_5v.PNG)
+
 This section handles **high‑voltage power conversion** from USB‑PD negotiated VBUS (up to 20 V) down to the system’s primary **5 V rail (PP5V)**.
 
 **Key points:**
@@ -41,6 +41,8 @@ The 5 V rail serves as the backbone for USB VBUS distribution, LDOs, and perip
 
 ## 2. Downstream USB‑C PD (Sink‑Side)
 
+![Downstream USB-C PD](./Downstream_USB.PNG)
+
 This block implements **USB‑PD sink functionality** for a downstream USB‑C port.
 
 **Functionality:**
@@ -55,6 +57,8 @@ This allows the hub to correctly present itself as a compliant USB‑C device wh
 ---
 
 ## 3. USB‑A 3.0 Downstream Ports
+
+![USB-A 3.0 Downstream Ports](./Downstream_USB3.PNG)
 
 Two USB‑A SuperSpeed ports are implemented with **independent power control and protection**.
 
@@ -74,6 +78,8 @@ This ensures each downstream port is USB‑IF compliant and protected against sh
 
 ## 4. USB 3.0 → Gigabit Ethernet Controller
 
+![USB 3.0 to Ethernet Controller](./Ethernet_IC.PNG)
+
 This section converts one USB 3.0 downstream port into **Gigabit Ethernet**.
 
 **Features:**
@@ -88,6 +94,8 @@ The controller interfaces directly with a discrete RJ‑45 connector containing 
 ---
 
 ## 5. USB 3.0 Hub Controller
+
+![USB 3.0 Hub Controller](./Hub_IC.PNG)
 
 The heart of the design is the **USB 3.0 hub IC**, responsible for upstream/downstream routing and port management.
 
@@ -108,6 +116,8 @@ Careful attention is paid to:
 
 ## 6. Power MUX (Source Selection)
 
+![Power MUX](./Mux.PNG)
+
 The power MUX selects between **multiple 5 V sources** (e.g., USB‑C VBUS vs auxiliary input) and feeds the system rail.
 
 **Why this matters:**
@@ -121,6 +131,8 @@ Resistor dividers and timing capacitors configure priority and switching thresho
 ---
 
 ## 7. 5 V → 3.3 V LDO
+
+![Low Voltage Power Rails](./Other_Power.PNG)
 
 This LDO generates the primary **3.3 V rail** used by:
 
@@ -139,6 +151,8 @@ This LDO generates the primary **3.3 V rail** used by:
 
 ## 8. 3.3 V → 1.0 V LDO
 
+![Low Voltage Power Rails](./Other_Power.PNG)
+
 A dedicated low‑noise LDO supplies the **1.0 V core rail** for high‑speed digital logic.
 
 **Key considerations:**
@@ -152,6 +166,8 @@ This rail is critical for USB 3.0 and Ethernet PHY reliability.
 ---
 
 ## 9. RJ‑45 Ethernet Jack
+
+![RJ-45 Jack](./RJ45.PNG)
 
 The Ethernet interface uses an RJ‑45 connector with **integrated magnetics and LEDs**.
 
@@ -167,6 +183,8 @@ This minimizes EMI while maintaining signal integrity at Gigabit speeds.
 ---
 
 ## 10. Upstream USB‑C + PD Sink
+
+![Upstream USB-C PD](./Upstream_USB.PNG)
 
 The upstream USB‑C port is the **primary host interface**.
 
